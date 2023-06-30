@@ -1,0 +1,2 @@
+FROM directus/directus:9.25.1
+COPY ./DirectusTypes.js /directus/extensions/modules/generate-types/index.js

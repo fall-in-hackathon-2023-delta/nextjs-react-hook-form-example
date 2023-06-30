@@ -1,0 +1,66 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+ingress:
+  rules:
+  - component:
+      name: directus
+    match:
+      path:
+        prefix: /directus
+name: lobster-app
+region: sfo
+services:
+- dockerfile_path: config/Dockerfile.dev
+  envs:
+  - key: LOG_LEVEL
+    scope: RUN_TIME
+    value: trace
+  - key: DB_CLIENT
+    scope: RUN_TIME
+    value: pg
+  - key: PASSWORD_RESET_URL_ALLOW_LIST
+    scope: RUN_TIME
+    value: http://localhost:3000/reset-password
+  - key: NODE_TLS_REJECT_UNAUTHORIZED
+    scope: RUN_TIME
+    value: "0"
+  - key: PUBLIC_URL
+    scope: RUN_TIME
+    value: https://fallin-2023-delta.ondigitalocean.app/directus
+  - key: CORS_ORIGIN
+    scope: RUN_TIME
+    value: "true"
+  - key: FLOWS_EXEC_ALLOWED_MODULES
+    scope: RUN_AND_BUILD_TIME
+    value: jsonwebtoken,crypto,ms
+  - key: CORS_ENABLED
+    scope: RUN_AND_BUILD_TIME
+    value: "true"
+  - key: ACCESS_TOKEN_TTL
+    scope: RUN_AND_BUILD_TIME
+    value: 30m
+  - key: DB_CONNECTION_STRING
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:9LZcp9eaY6jw9uwim/A8QkUgTPZKcdAa:dChn1PLtQVD8QOkYom6p0vaHh+j3Qyxj+k/FQw/QsBXFFOb9v0hmZKgbVtM9fjSWw47CO0Nx/e9LeS6T3ayrZzLtneBqx+4qnzxAT8jHUbE+RBNXKMLWN2AMkXQ+SceYOfxmCmWxre5g3kALpqUjK/hlDziptmyxYSqOkZXx72OsfHybeUL7bTxD4JKmljbRKeiavezZ31egfJ2SRxLF6nQ=]
+  - key: SECRET
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:vJhMByri2jSJ6tK2Sad0Kevvrk8+dven:ZT5xbfFovYDT3fs6uzR17MzZlv0HSpLK46vWuHphCUYeOtbirVMd4X8UZQiKkaVa8lb0Oc4iGYqXXrlpjSgVR4fhgFpqsNmfUScMfw==]
+  - key: KEY
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:epcKZ8ReFrxEHcMDKpU306aeGv9S8zKn:p16atw0yK7WvX+1Tllnu5oMmTH0xYc6WruJfy6YbdyqieGE=]
+  - key: WEBSOCKETS_ENABLED
+    scope: RUN_AND_BUILD_TIME
+    value: "true"
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: fall-in-hackathon-2023-delta/nextjs-react-hook-form-example
+  http_port: 8055
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: directus
+  source_dir: config

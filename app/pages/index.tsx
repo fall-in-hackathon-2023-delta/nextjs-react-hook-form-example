@@ -1,8 +1,3 @@
-/// www.app.com/
-
-import { useRouter } from "next/router"
-
-
 export default function Home() {
 
 
@@ -10,3 +5,7 @@ export default function Home() {
         <div>Hello World!</div>
     )
 }
+
+// feat(boilerplate): adds initial project structure and dependancies
+// feat(events): adds formCreate....adds
+// fix(form): correct type validation
