@@ -4,11 +4,9 @@ import { useRouter } from "next/router"
 
 
 export default function Home() {
-const router = useRouter()
 
-router.push('/events')
 
     return (
-        <div></div>
+        <div>Hello World!</div>
     )
 }
