@@ -1,5 +1,13 @@
 import { DateTime } from 'luxon';
 
+
+/*
+Use case: Adventure therapy
+
+Core requirements:
+    
+
+*/
 // namespaces support autocompletion and can be invoked like this: T.Event or T.Requirement.
 export namespace T {
   export type Event = {
@@ -39,7 +47,7 @@ export namespace T {
     id: string;
     description: string;
     isHardRequirement: boolean; // if true, then event can be postponed due to lack of commitment. Organizer can toggle on/off at any time.
-    commitmentsRequired: number; // the number of people who commit to complete the todo
+    commitmentsRequired: number; // the number of people who commit to complete the todo. Ex: Need 3 people to volunteer to bring 2 chairs each.
     options?: Todo[]; // we don’t care what dessert you bring, we just care you bring a dessert of type “vegan” | “vegetarian” | “has_meat”, selected from dropdown  "baseball supplies" | "basketball" | "frisbee"
     commitments: Commitment[];
   };
@@ -48,6 +56,7 @@ export namespace T {
     status: "proposed" | "accepted" | "in_progress" | "declined" | "completed" | "cancelled" | "expired";
     contributor: Person;
     todoID: string; // Could potentially remain ID instead of entire object, due to normalized redux store
+    chat: Chat;
   };
   export type Todo = {
     id: string;
