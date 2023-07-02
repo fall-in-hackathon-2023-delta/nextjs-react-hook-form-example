@@ -12,6 +12,10 @@ module.exports = {
     extend: {
       colors: {
         spindle: '#a2b2e2',
+        poloBlue: '#88a4d7',
+        danubeMid: '#729fcf',
+        danube: '#5c99c7',
+        steelBlue: '#4682b4',
       },
     },
   },
