@@ -1,14 +1,14 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* @layer base {
-   body {
-      @apply bg-white;
-   }
+@layer base {
+  body {
+    @apply bg-spindle;
+  }
 }
 @layer utilities {
-   .content-auto {
-      content-visibility: auto;
-   }
-} */
+  .content-auto {
+    content-visibility: auto;
+  }
+}

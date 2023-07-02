@@ -10,12 +10,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      colors: {
+        spindle: '#a2b2e2',
+      },
     },
   },
   plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio")
-  ]
-}
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
