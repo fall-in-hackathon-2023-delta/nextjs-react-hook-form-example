@@ -1,0 +1,61 @@
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .title{
+    font-size: 24px;
+  }
+  .login-field{
+    width: 245px;
+    height: 30px;
+  }
+  .login-label{
+    font-size: 10px;
+    margin-right:208px
+  }
+  .login-button{
+    background-color: #414BB2;
+    color: white;
+    width: 245px;
+    height: 30px;
+    margin-top: 20px;
+  }
+  .login-link{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-right:140px;
+  }
+  .signup-form{
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+  }
+  .signup-label{
+    font-size: 10px;
+    margin-right:210px
+  }
+  .signup-labelEmail{
+    font-size: 10px;
+    margin-right:227px
+  }
+  .signup-field{
+    width: 245px;
+    height: 30px;
+  }
+  .signup-button{
+    background-color: #414BB2;
+    color: white;
+    width: 245px;
+    height: 30px;
+    margin-top: 20px;
+  }
+  
