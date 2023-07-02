@@ -1,7 +1,7 @@
 import NextAuth, { DefaultSession, DefaultUser } from "next-auth";
 import { DefaultJWT } from "next-auth/jwt";
 import { JWT } from "next-auth/jwt";
-import { DirectusUser } from "./Directus/User";
+import { DirectusUser } from "./Directus";
 
 declare module "next-auth" {
    /**

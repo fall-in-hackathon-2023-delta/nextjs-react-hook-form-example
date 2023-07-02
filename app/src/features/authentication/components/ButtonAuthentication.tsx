@@ -14,7 +14,7 @@ export default function ButtonAuthentication() {
     <div>
       {status !== "authenticated" ? (
         <button
-        className="bg-blue-300 rounded-md p-4 hover:cursor-pointer"
+        className="bg-steelBlue rounded-md p-4 hover:cursor-pointer"
           style={{
          
             marginRight: "10px",
@@ -29,7 +29,7 @@ export default function ButtonAuthentication() {
         </button>
       ) : (
         <button
-        className="bg-blue-300 rounded-md p-4 hover:cursor-pointer"
+        className="bg-steelBlue rounded-md p-4 hover:cursor-pointer"
           style={{
           
             marginRight: "10px",

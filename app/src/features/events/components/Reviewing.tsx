@@ -78,34 +78,7 @@ function Reviewing() {
 
   return (
     <div>
-      <div>
-        <button
-          style={{
-            backgroundColor: status === "Going" ? "#CEE741" : undefined,
-            marginRight: "10px",
-          }}
-          onClick={() => handleStatusChange("Going")}
-        >
-          Going
-        </button>
-        <button
-          style={{
-            backgroundColor: status === "Maybe" ? "#CEE741" : undefined,
-            marginRight: "10px",
-          }}
-          onClick={() => handleStatusChange("Maybe")}
-        >
-          Maybe
-        </button>
-        <button
-          style={{
-            backgroundColor: status === "Not Going" ? "#CEE741" : undefined,
-          }}
-          onClick={() => handleStatusChange("Not Going")}
-        >
-          Not Going
-        </button>
-      </div>
+      
       <h1
         style={{
           fontSize: "24px",

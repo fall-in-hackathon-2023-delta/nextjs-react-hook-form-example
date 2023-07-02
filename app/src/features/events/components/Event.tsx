@@ -50,23 +50,27 @@ function Form() {
     keyName: "todo",
   });
 
-  useEffect(() => {
-    if (fields?.length === 0) {
-      append({
-        id: v4(),
-        label: "",
-        priority: 0,
-        isEssential: false,
-        numberRequired: 1,
-        offersAllowed: false,
-        options: [],
-        commitments: [],
-      });
-    }
-  }, []);
+
+
+  const handleAddTodo = () => {
+    console.log("adding todo")
+    append({
+      id: v4(),
+      label: "",
+      status: "open",
+      priority: 0,
+      isEssential: false,
+      numberRequired: 1,
+      offersAllowed: false,
+      options: [],
+      commitments: [],
+    });
+  }
 
   const onSuccess = (data: any) => console.log(data);
   const onError = (error: any) => console.log(error);
+
+  console.log("fields", fields)
 
   return (
     <form onSubmit={handleSubmit(onSuccess, onError)}>
@@ -74,13 +78,13 @@ function Form() {
       {/* <Reviewing /> */}
 
 
-      <Todo.Container type={"myTodos"} fields={fields} />
+      <Todo.Container type={"myTodos"}fieldArray={{fields, append, prepend, remove, swap, move, insert, replace, update}} />
 
-      <Todo.Container type={"pendingTodos"} fields={fields} />
+      <Todo.Container type={"pendingTodos"} fieldArray={{ fields, append, prepend, remove, swap, move, insert, replace, update }} />
 
-      <Todo.Container type={"todos"} fields={fields} />
+      <Todo.Container type={"todos"} fieldArray={{ fields, append, prepend, remove, swap, move, insert, replace, update }} handleAddTodo={handleAddTodo}/>
 
-      <Todo.Container type={"completedTodos"} fields={fields} />
+      <Todo.Container type={"completedTodos"} fieldArray={{ fields, append, prepend, remove, swap, move, insert, replace, update }}/>
     </form>
   );
 }

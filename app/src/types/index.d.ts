@@ -17,8 +17,7 @@ export namespace T {
             id: string;
             title?: string;
             description?: string;
-            requirements?: Requirement[];
-            categories?: Category;
+            todos?: Todo[];
             duration: number; // in minutes
             location: Location;
             dateTime: DateTime;

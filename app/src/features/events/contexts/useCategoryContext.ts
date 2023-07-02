@@ -23,7 +23,7 @@ export default function useCategoryContext(type: string, fields: T.Base.Todo[]) 
       };
     } else if (type === "pendingTodos") {
       const pendingRequirements = fields.filter((field) => {
-        return (field.status === "in_progress" || field.status === "proposed") && field.contributor?.id !== session?.user?.id;
+        return (field.status === "in_progress" || field.status === "proposed")
       });
 
       return {
