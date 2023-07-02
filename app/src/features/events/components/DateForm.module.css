@@ -1,0 +1,21 @@
+
+.home{
+    margin-left: 550px;
+}
+.search{
+    margin-right: 550px;
+}
+.file-upload{
+    background-color: #dbdce0;
+    color: white;
+    width: 245px;
+    height: 30px;
+    margin-top: 20px;
+}
+.confirm-button{
+    background-color: #414BB2;
+    color: white;
+    width: 245px;
+    height: 30px;
+    margin-top: 20px;
+}

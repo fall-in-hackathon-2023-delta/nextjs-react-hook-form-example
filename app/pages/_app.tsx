@@ -3,7 +3,7 @@ import React from "react";
 import { SessionProvider, useSession } from "next-auth/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-// import "../styles/globals.css";
+import "src/styles/globals.css";
 
 
 const queryClient = new QueryClient();
